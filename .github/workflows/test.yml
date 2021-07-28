@@ -1,0 +1,31 @@
+name: Unit Tests
+
+on:
+  push:
+    branches:
+      - develop
+
+  pull_request:
+    branches:
+      - '*'
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        platform: [ubuntu-latest]
+        node-version: [14.x]
+    env:
+      CI: true
+      MNEMONIC: novel mobile inform nurse circle spoon cricket soup crowd clip hawk glad
+      INFURA_API_KEY: e0236555533346009dd59e7a1786a660
+    runs-on: ${{ matrix.platform }}
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: yarn install --frozen-lockfile
+      - run: ${{ matrix.env }} yarn typechain
+      - run: ${{ matrix.env }} yarn test
