@@ -1,5 +1,6 @@
 {
-  "name": "hardhat-boilerplate",
+  "name": "contracts-starter",
+  "author": "Yos Riady",
   "license": "MIT",
   "version": "0.0.1",
   "devDependencies": {
