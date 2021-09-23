@@ -1,6 +1,6 @@
-import { SignerWithAddress } from "@nomiclabs/hardhat-ethers/signers";
-import { ethers } from "hardhat";
-import { Signers } from "../../types";
+import { SignerWithAddress } from '@nomiclabs/hardhat-ethers/signers';
+import { ethers } from 'hardhat';
+import { Signers } from '../../types';
 
 /// This is run at the beginning of each suite of tests
 export function contract(description: string, hooks: () => void): void {

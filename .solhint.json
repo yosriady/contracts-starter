@@ -17,6 +17,7 @@
       }
     ],
     "no-empty-blocks": "off",
+    "quotes": ["error", "single"],
     "reason-string": ["warn", { "maxLength": 64 }]
   }
 }

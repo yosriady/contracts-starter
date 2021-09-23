@@ -1,6 +1,6 @@
-import { Signers } from "./";
+import { Signers } from './';
 
-declare module "mocha" {
+declare module 'mocha' {
   export interface Context {
     signers: Signers;
   }
